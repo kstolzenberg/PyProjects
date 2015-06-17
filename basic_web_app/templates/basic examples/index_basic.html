@@ -1,0 +1,19 @@
+$def with (greeting)
+
+<html>
+    <head>
+        <title>Gothons of Planet Percal #25</title>
+    </head>
+<body>
+<!--take away the boilerplate to use with dynamic-->
+
+$if greeting:
+    I just wanted to say <em style="color:green; font-family:Arial; font-size:4em;">$greeting</em>
+$else:
+    <em>hello</em>, world!
+
+<!--a link to go home! this links to hello_form.html - back to the get method-->
+<a href="/hello">Go Back!</a>
+
+</body>
+</html>

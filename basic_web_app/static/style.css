@@ -1,0 +1,23 @@
+html {
+    font-family: Arial; 
+    font-size: 2em;
+    text-decoration: none;
+    color: blue;
+    text-align: center;
+}
+
+footer {
+    padding-top:2em;
+    font-size: .5em;
+}
+
+/*this is all the link styling you need!!!*/
+
+a {
+    color: red;
+    text-decoration: none;
+    background-color: yellow;
+}
+
+
+

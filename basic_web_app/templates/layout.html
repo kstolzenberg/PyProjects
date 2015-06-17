@@ -1,0 +1,18 @@
+$def with (content)
+
+<!DOCTYPE html>
+<html>
+<!--note this wrapper/boilerpolate will always be the same and then the body will change. this ensures consistent layouts!-->
+<head>
+    <title>Baby Lady Pants Web App</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+
+$:content
+
+</body>
+<footer>
+    <a href="/hello">toodles!</a>
+</footer>
+</html>

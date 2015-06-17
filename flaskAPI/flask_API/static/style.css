@@ -1,0 +1,15 @@
+html {
+    font-family: arial;
+    font-size: 1em;
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+    padding-top: 2em;
+}
+
+ul{
+    list-style-type: circle;
+}
