@@ -3,8 +3,27 @@
 <head>
     <title>A Parking Story</title>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">
+
 </head>
 <body>
+<h1>A Parking Story</h1>
+    <p>
+    There are {{ total_stallct }} total parking stalls in SF*, which ends up being {{ total_prk_area }} square miles*.
+    </p>
 
+    <p>
+    The ratio of all public on/off street parking to the entire area of San Francisco is: {{ prk_ratio }}*.
+    </p>
 </body>
+
+<footer>
+<div>
+    *Datafrom: <br>
+    *For modeling, this assumes each stall is 9'x18' <br>
+    *US Census Data <br>
+
+    Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+</footer>
+
 </html>
