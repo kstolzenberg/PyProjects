@@ -7,10 +7,9 @@ fill(5,119,136,100)
 svg = ximport("svg")
 
 # note arcs will give you circles about a center point!! no close necessary. only a section if you give it a range
-# matt was right - this is by far the easiest!
-
 origin = Point(WIDTH/2, HEIGHT/2)
-    
+
+reset()
 # clip is the mask!!! I don't get this fill syntax?? terrible docs.
 # with clip(arc(origin.x, origin.y, 100, fill='white')): #indent the block below
 arc(WIDTH/2, HEIGHT/2, 200)
@@ -30,6 +29,3 @@ total_ratio = 0.05
 arc(origin.x, origin.y, 125, range=total_ratio, fill='white', close=True)
     
     
-#export('/test2.SVG')
-# ? to get interactive hovers? tool tips? other .eps will have to do? no native module :<
-# .eps to svg? 
