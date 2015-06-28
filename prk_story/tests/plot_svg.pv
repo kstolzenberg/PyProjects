@@ -1,9 +1,8 @@
 size(512, 512)
 color(mode=RGB, range=255)
-background(255)
+background(0,50)
 
 svg = ximport("svg")
-nofill()
 
 paths = svg.parse(open('/Users/karen/pyprojects/prk_story/tests/sf36.svg').read())
 
@@ -11,6 +10,9 @@ print paths[0][1]
 
 # this still renders as solid black, when everything should be base-255?
 for path in paths:
-    fill(124, 56, 65)
-    strokewidth(10)
-    drawpath(path)
+    # not sure why the graphic state has to work?
+    transform(CENTER)
+    translate(WIDTH/2, HEIGHT/2)
+    drawpath(path, fill=("white",.5), stroke="black", strokewidth=1)
+
+# work on positioning! - scale and draw about the center

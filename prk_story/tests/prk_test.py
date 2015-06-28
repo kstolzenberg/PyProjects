@@ -36,12 +36,13 @@ total_prk_sf = total_stallct * (162) # 9'* 18' avg prk spot = 162 sq.ft // assum
 total_prk_area = total_prk_sf / 27878400 # 1sq mile is 27878400 sq ft // convert to square miles
 sf_area = 46.87 # sq miles per census bureau // you could subtract out remaining area of streets? not sure how that would overlap?
 prk_ratio = (total_prk_area / sf_area)
+possible_apt = (total_prk_sf / 511) # average studio size is 511 sf per Paragon
 
 print "total stall ct: %g" % total_stallct
 print "total square miles of parking: %g" % total_prk_area
 print "ratio of parking to SF: %g \n rats thats not very high" % prk_ratio
+print "if we converted %g parking spaces to housing, we could have %g studio apartments!" % (total_stallct, possible_apt)
 
-# how do you know how to order things??
 
 # export graphic to local disk
 paths = svg.parse(open('/Users/karen/pyprojects/prk_story/tests/sf36.svg').read())
