@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>A Parking Story</title>
-    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">-->
     <link rel="stylesheet" type="text/css"href="/Users/karen/pyprojects/prk_story/prk_story/static/style.css">
     <link rel="shortcut icon" href="{{url_for('static', filename='favicon.ico')}}">
+    <script type="text/javascript" src="/Users/karen/pyprojects/prk_story/prk_story/static/skrollr.min.js"></script>
 </head>
 
 <body>
-    <div>
+    <div id="test"></div>
+    <div id="test">
         <h1>A Parking Story</h1>
-        <img src="{{ url_for('static', filename='car.png') }}">
+        <!--goal to  make this guy slide across - this works!! you can vary how far with the percents and vertical when it starts with the data point-->
+        <img data-0="transform:translate(-250%,0);" data-300="transform:tranlate(250%,0);" src="/Users/karen/pyprojects/prk_story/prk_story/static/car.png">
     </div>
 
     <!--this does a gradient fade as you scroll by-->
-    <div id="test" data-0="background-color:rgb(255,55,200);" data-500="background-color:rgb(80,80,80);">
+    <!--adding more CSS properties...thing have to start someplace and go someplace!-->
+    <!--data-x == position offsets relative to the anchor. can also do percentages-->
+    <div id="test" data-0="background-color:rgb(255,55,200); transform:rotate(0deg);" data-600="background-color:rgb(80,80,80);transform:rotate(15deg);">
         <h3>San Francisco has {{ total_stallct | int() }} public parking spots*</h2>
     </div>
 
@@ -32,26 +37,15 @@
     <h3>Support public transportation and sustainable urbanism.</h3>
     </div>
     
-     <div>
+     <div id="test" data-top="background-color:rbg(190,190,255);" data-bottom="background-color:rgb(80,80,80)">
         <h2>*Method</h2>
-        <p>Public parking includes public <a href="https://data.sfgov.org/Transportation/On-street-Parking-Census/3gg2-z57m">on-street</a> and <a href="https://data.sfgov.org/Transportation/Off-Street-parking-lots-and-parking-garages/uupn-yfaw">off-street</a> counts from <a href="https://data.sfgov.org/">SF OpenData</a>. This count does not include code-required private parking for commerical or residential uses.</p>
-
-        <p>Parking stall size is modeled as 9’x18’ per <a href="http://goo.gl/YrFGEI">ADA minimums.</a> Parking area model does not include car access lanes or additional accessory parking areas. San Francisco County area referenced from <a href="http://quickfacts.census.gov/qfd/states/06/0667000.html">US Census Bureau</a>.</p>
-
-        <p>Housing model references <a href="http://my.paragon-re.com/Docs/General/SixtyFortyImages/Asking-Rent_per-SqFt_by-BRs.jpg">2013 Paragon Real Estate analysis</a> and does not include typical residential accessory areas.  Not all of the parking areas may be suitable for residential development.</p>
-        
         <p>Built on <a href="https://www.heroku.com/">Heroku</a> with <a href="http://flask.pocoo.org/">Flask</a>, <a href="http://plotdevice.io/">PlotDevice</a> and <a href="http://prinzhorn.github.io/skrollr/">Skrollr</a> :).</p>
     </div>    
-
-    <!--<script type="text/javascript" src="{{ url_for('static', filename='skrollr.min.js') }}"></script>-->
-    <script type="text/javascript" src="/Users/karen/pyprojects/prk_story/prk_story/static/skrollr.min.js"></script>
-
+    <div id="skrollr-body"></div>
     <script type="text/javascript">
         var s = skrollr.init();
+        smoothScrolling=True;
     </script>
 </body>
-
-<footer>
-</footer>
 
 </html>
