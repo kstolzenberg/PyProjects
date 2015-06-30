@@ -14,7 +14,7 @@ clear(all)
 
 svg = ximport("svg")
 sf_paths = svg.parse(open('/Users/karen/pyprojects/prk_story/tests/sf36.svg').read())
-sf_path = sf_paths[0]
+sf_path = sf_paths[0] # there is a single path in here so we select just that one!
 
 def sf_correction(path, x, y):
     x_offset = 0
@@ -27,7 +27,7 @@ sf_path.translate(*sf_correction(sf_path, WIDTH/2, HEIGHT/2))
 sf_path.scale(3)
 
 # note: the drawpath method doesn't return anything bc type=nonetype.
-drawpath(sf_path.copy(), fill=("white",.75), stroke="black", strokewidth=.5)
+drawpath(sf_path.copy(), fill=("white",.75), stroke="black", strokewidth=.5) # this actually draw the shape
 
 with clip(sf_path):
     geometry(PERCENT)
@@ -35,5 +35,9 @@ with clip(sf_path):
     rotate(.17)
     arc(WIDTH/2, (HEIGHT/2)+30, 275, range=total_ratio, fill=('red',.5), close=True)
 
-export("/Users/karen/pyprojects/prk_story/tests/sf_diagram.pdf")
+reset()
+text("The Rest of San Francisco",140,430,fontsize=16,family="Hammersmith One")
+text("Parking",392,190,fontsize=12,family="Hammersmith One")
+#export("/Users/karen/pyprojects/prk_story/tests/sf_paths.pdf")
+
 

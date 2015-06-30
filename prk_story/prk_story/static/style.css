@@ -1,4 +1,52 @@
-html {
-    font-family: Arial;
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+@import url(http://fonts.googleapis.com/css?family=Hammersmith+One);
+
+
+body {
+    font-family: 'Roboto', Verdana, sans-serif;
+    color:#ffffff;
     text-align: center;
+    font-size: 16px;
+    background-color:#BEC8C8;
 }
+
+#test {
+    height:500px;
+}
+
+a {text-decoration:underline; color:#ffffff}
+/*p {color: #4F5454;}*/
+
+
+h1 {
+    font-family: 'Hammersmith One', Arial Bold, sans-serif;
+    font-weight: normal;
+    font-size: 4em;
+    /*at 16px, 72pt is 4.5em*/
+}
+
+h2 {
+    font-family: 'Hammersmith One', Arial Bold, sans-serif;
+    font-weight: normal;
+    font-size: 3.5em;
+}
+
+h3 {
+    font-family: 'Hammersmith One', Arial Bold, sans-serif;
+    font-weight: normal;
+    font-size: 2.25em;
+}
+
+h4 {
+    font-family: 'Hammersmith One', Arial Bold, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+}
+
+h5 {
+    font-family: 'Hammersmith One', Arial, sans-serif;
+    font-weight: normal;
+    font-weight: bold;
+    font-size: .75em;
+}
+

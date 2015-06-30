@@ -6,15 +6,19 @@
 </head>
 
 <body>
-<h1>These are Vimeo's top picks for {{ now }}:</h1>
 
-<ul>
-{% for titles in all_videos %}
-  <li>{{ titles }}</li>
-{% endfor %}
-</ul>
+    <img src="{{ url_for('static', filename='banner.jpeg') }}">
+    <!--this is how you serve flask images!-->
 
-<p><a href="https://vimeo.com/channels/staffpicks">See more @ Vimeo! ⇝</a></p>
+    <h1>These are Vimeo's top picks for {{ now }}:</h1>
+
+    <ul>
+    {% for titles in all_videos %}
+      <li>{{ titles }}</li>
+    {% endfor %}
+    </ul>
+
+   <h1> <p><a href="https://vimeo.com/channels/staffpicks">See more @ Vimeo! ⇝</a></p> </h1>
 
 </body>
 </html>

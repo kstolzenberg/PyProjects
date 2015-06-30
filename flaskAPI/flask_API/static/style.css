@@ -1,15 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Bangers);
+
 html {
-    font-family: arial;
+    font-family: 'Bangers';
     font-size: 1em;
-    color: blue;
+    color: white;
+    background-color: #B3BEBE ;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
-    color: orange;
+    color: white;
     padding-top: 2em;
 }
 
 ul{
-    list-style-type: circle;
+    list-style-type: none;
 }
