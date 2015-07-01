@@ -1,34 +1,78 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400);
 @import url(http://fonts.googleapis.com/css?family=Hammersmith+One);
 
-
 body {
     font-family: 'Roboto', Verdana, sans-serif;
     color:#ffffff;
-    text-align: center;
     font-size: 16px;
+    background-color:#BEC8C8;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    width:100%; 
+    display: flex;
+    align-items:flex-end;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-top:7em;
+    margin-bottom:1em;
+}
+
+div {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:auto;
+}
+
+.slide1 {
+    width:100%;
+    height:600px;
     background-color:#BEC8C8;
 }
 
-#test {
-    height:400px;
+.slide2{
+    width:100%;
+    height:600px;
+    background-color:#A4ADAD;
 }
 
-a {text-decoration:underline; color:#ffffff}
-/*p {color: #4F5454;}*/
+#backgdimg{
+    background-image: url("parking.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.skrollable {margin:0; padding:0;width:100%;}
+
+#illo2 {display:block;width:32em; height:32em;}
+#illo3 {padding-top:2em; padding-bottom:2em;}
+
+a {text-decoration:underline; color:#ffffff}
+
+a.nav_link {
+    font-family: 'Hammersmith One', Arial Bold, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    text-decoration:none;
+}
 
 h1 {
     font-family: 'Hammersmith One', Arial Bold, sans-serif;
     font-weight: normal;
-    font-size: 4em;
-    /*at 16px, 72pt is 4.5em*/
+    font-size: 4em; /*at 16px, 72pt is 4em*/
 }
 
 h2 {
     font-family: 'Hammersmith One', Arial Bold, sans-serif;
     font-weight: normal;
     font-size: 3.5em;
+    -webkit-margin-after:.25em;
 }
 
 h3 {
@@ -37,16 +81,25 @@ h3 {
     font-size: 2.25em;
 }
 
-h4 {
-    font-family: 'Hammersmith One', Arial Bold, sans-serif;
-    font-weight: normal;
-    font-size: 1em;
-}
+/*use this to check & style for smaller screens. iphone & tablet*/
+@media (min-width: 320px) and (max-width: 736px) {
+    .slide1 {
+        height:400px;
+    }
 
-h5 {
-    font-family: 'Hammersmith One', Arial, sans-serif;
+    .slide2 {
+        height:400px;
+    }
+
+    #illo2 {display: block; width:25em; height:25em;}
+    #illo3{padding: none;}
+    h3 {font-family: 'Hammersmith One', Arial Bold, sans-serif;
     font-weight: normal;
-    font-weight: bold;
-    font-size: .75em;
+    font-size: 1.75em;}
+
+    body {
+    font-size: .8em;
+    }
+
 }
 
