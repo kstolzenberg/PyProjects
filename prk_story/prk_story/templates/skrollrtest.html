@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div>
     <!--<div id="test">
         <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
@@ -25,12 +26,13 @@
     <!--data-x == position offsets relative to the anchor. can also do percentages-->
     <!--how does it come back? also in terms of percent of the entire page! seems to work ok?-->
     <!--this does the parallax! translate up moves the div over the last one. but it struggles with relative values?-->
-    <div id="test2" style="height:400px;" data-10p="transform:translate(0,0%);" data-30p="transform:translate(0,-50%);">
+    <div data-10p="transform:translate(0,0%);" data-30p="transform:translate(0,-50%);">
         <h3>San Francisco has {{ total_stallct | int() }} public parking spots*</h2>
     </div>
 
     <div class='slide2' data-200="background-color:rgb(190,190,200); transform:rotate(0deg);" data-400="background-color:rgb(80,80,80);transform:rotate(15deg);">
-        <img src="{{url_for('static', filename='diagram.png') }}">
+        <!--<img src="{{url_for('static', filename='diagram.png') }}">-->
+        <div id="illo2"> <img style="width:100%; height:auto;" src="/Users/karen/pyprojects/prk_story/prk_story/static/diagram.png"></div>
         <h3>...which represents {{ prk_ratio *100 | round(2,'floor') }} percent of the entire city!</h2>
     </div>
 
@@ -50,6 +52,7 @@
             <div style=""><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
             </div>
+    </div>
     </div>    
 
     <script type="text/javascript">

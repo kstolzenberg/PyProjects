@@ -47,7 +47,13 @@ div {
     background-repeat: no-repeat;
 }
 
+.skrollable {margin:0; padding:0;}
 
+#skrollr-body {
+    width:100%;
+    height:100%;
+    position: relative;
+}
 
 #illo2 {display:block;width:32em; height:32em;}
 #illo3 {padding-top:2em; padding-bottom:2em;}
@@ -90,8 +96,13 @@ h3 {
         height:400px;
     }
 
+    .nav {
+    margin-bottom:2em;
+    }
+
     #illo2 {display: block; width:25em; height:25em;}
     #illo3{padding: none;}
+
     h3 {font-family: 'Hammersmith One', Arial Bold, sans-serif;
     font-weight: normal;
     font-size: 1.75em;}
