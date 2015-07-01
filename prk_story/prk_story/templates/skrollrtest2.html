@@ -1,0 +1,70 @@
+<head>
+    <style type="text/css">
+         #slide-1{height:500px;background-color:red;z-index:4;}
+         #slide-2{height:500px;background-color:yellow; z-index:3;}
+         #slide-3{height:500px; background-color:blue; z-index: 2;}
+         #slide-4{height:500px; background-color:green; z-index: 1;}
+         body{font-family: arial;}
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <section id="slide-1" class="homeSlide" data-0p="height:100%;" data-33p="height:0%;">
+            <div class="bcg"
+
+                data-anchor-target="#slide-1"
+                >
+
+                <div class="hsContainer">
+                    <div class="hsContent"
+                    >
+                        <h2>Simple parallax scrolling is...</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+         <section id="slide-2" class="homeSlide" data-33p="height:100%;" data-66p="height:0%;">
+            <div class="bcg"
+                data-center="transform:translate(50%,0);"
+                data-top-bottom="transform:translate(0,50%);"
+                data-bottom-top="transform:translate(0,100%);"
+                data-anchor-target="#slide-2"
+            >
+                <div class="hsContainer">
+                    <div class="hsContent">
+                        <h2>Simple parallax scrolling is...</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="slide-3" class="homeSlide"  data-66p="height:100%;" data-100p="height:0%;">
+            <div class="bcg"
+                data-center="transform:translate(50%,0);"
+                data-top-bottom="transform:translate(0,50%);"
+                data-bottom-top="transform:translate(0,100%);"
+                data-anchor-target="#slide-3"
+            >
+                <div class="hsContainer">
+                    <div class="hsContent">
+                        <h2>Simple parallax scrolling is...</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="text/javascript" src="/Users/karen/pyprojects/prk_story/prk_story/static/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init({
+            forceHeight:false
+        });
+        smoothScrolling=True;
+        //refresh skrollr after resizing
+        s.refresh($('.homeSlide'));
+    </script>
+</body>
