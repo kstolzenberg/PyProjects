@@ -7,11 +7,12 @@
 
 <body>
 
-    <img src="{{ url_for('static', filename='banner.jpeg') }}">
+    <img style="width:auto; height:400px; opacity:.5;"src="{{ url_for('static', filename='banner.png') }}">
     <!--this is how you serve flask images!-->
 
     <h1>These are Vimeo's top picks for {{ now }}:</h1>
 
+    <!--stash each list item in an html list!-->
     <ul>
     {% for titles in all_videos %}
       <li>{{ titles }}</li>

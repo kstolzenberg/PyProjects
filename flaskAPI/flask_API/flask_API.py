@@ -1,5 +1,3 @@
-# use Flask to send dynamic API info to the browser
-# now we want to add templating and static files
 import datetime
 
 from flask import Flask
